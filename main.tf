@@ -50,6 +50,7 @@ resource "google_compute_instance" "f1-instance" {
   name         = "f1-instance"
   machine_type = "f1-micro"
   zone         = "us-west1-b"
+  project      = "terraform-testing-project-sg"
   tags         = ["iap-ssh"]
 
   boot_disk {
@@ -68,8 +69,7 @@ resource "google_compute_instance" "f1-instance" {
   }
 
   network_interface {
-    network         = "test-network"
-    
+    network         = "test-network"    
   }
 }
 
