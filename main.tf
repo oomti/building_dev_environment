@@ -8,6 +8,25 @@ resource "google_compute_network" "test_network" {
 #VPC Subnet
 
 # Firewall rule IAP SSH traffic
+resource "google_compute_firewall" "iap-ssh-allow" {
+  name        = "iap-ssh-allow"
+  network     = "test-network"
+  direction   = "INGRESS"
+  priority    = 1000
+  action      = "ALLOW"
+
+  source_ranges = ["35.235.240.0/20"]
+
+  # Allow SSH traffic
+  allow {
+    protocol = "tcp"
+    ports    = ["22"]
+  }
+
+  # Apply the firewall rule to instances with the "iap-ssh" tag
+  target_tags = ["iap-ssh"]
+}
+
 
 
 /*
