@@ -70,8 +70,6 @@ resource "google_compute_instance" "f1-instance" {
   network_interface {
     network         = "test-network"
     
-    # Do not allocate an external IP address
-    access_config   = []
   }
 }
 
