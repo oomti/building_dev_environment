@@ -4,7 +4,7 @@
 Enable OS Login feature on VM ( this is added in metadata, and apparently required to be done at VM creation)
 Grant OS Login Permission to service account
 Grant IAP-Secured Tunnel User Permission
-Grant Cloud Build Service account(for cloud build)
+
 Enable IAP SSH traffic in firewall to the VM
 Enable IAM API
 Enable IAP Proxy API
