@@ -13,7 +13,6 @@ resource "google_compute_firewall" "iap-ssh-allow" {
   network     = "test-network"
   direction   = "INGRESS"
   priority    = 1000
-  action      = "ALLOW"
 
   source_ranges = ["35.235.240.0/20"]
 
