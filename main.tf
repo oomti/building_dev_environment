@@ -13,6 +13,7 @@ resource "google_compute_firewall" "iap-ssh-allow" {
   network     = "test-network"
   direction   = "INGRESS"
   priority    = 1000
+  project     = "terraform-testing-project-sg"
 
   source_ranges = ["35.235.240.0/20"]
 
